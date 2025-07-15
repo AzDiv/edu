@@ -627,11 +627,7 @@ const Accueil: React.FC = () => {
                   Dr. Aicha Maazouz
                 </h3>
                 
-                <p className={`text-blue-600 font-semibold mb-4 ${
-                  settings.fontSize === 'large' ? 'text-lg' : settings.fontSize === 'small' ? 'text-base' : 'text-base'
-                } ${settings.darkMode ? 'dark:text-blue-400' : ''} ${settings.highContrast ? 'text-white' : ''}`}>
-                  Docteur en Littérature Française • Professeur Agrégé • Innovateur Pédagogique
-                </p>
+
                 
                 <div className={`space-y-4 text-gray-600 ${
                   settings.darkMode ? 'dark:text-gray-300' : ''
@@ -649,41 +645,7 @@ const Accueil: React.FC = () => {
 
                   </p>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                    <div className={`bg-blue-50 p-4 rounded-lg ${
-                      settings.darkMode ? 'dark:bg-blue-900' : ''
-                    } ${settings.highContrast ? 'bg-blue-800' : ''}`}>
-                      <h4 className={`font-semibold text-blue-800 mb-2 ${
-                        settings.darkMode ? 'dark:text-blue-200' : ''
-                      } ${settings.highContrast ? 'text-white' : ''}`}>
-                        Formation
-                      </h4>
-                      <ul className={`text-sm space-y-1 text-blue-700 ${
-                        settings.darkMode ? 'dark:text-blue-300' : ''
-                      } ${settings.highContrast ? 'text-white' : ''}`}>
-                        <li>• Doctorat en Littérature Française - Sorbonne</li>
-                        <li>• Agrégation de Lettres Modernes</li>
-                        <li>• Master en Pédagogie Numérique</li>
-                      </ul>
-                    </div>
-                    
-                    <div className={`bg-green-50 p-4 rounded-lg ${
-                      settings.darkMode ? 'dark:bg-green-900' : ''
-                    } ${settings.highContrast ? 'bg-green-800' : ''}`}>
-                      <h4 className={`font-semibold text-green-800 mb-2 ${
-                        settings.darkMode ? 'dark:text-green-200' : ''
-                      } ${settings.highContrast ? 'text-white' : ''}`}>
-                        Réalisations
-                      </h4>
-                      <ul className={`text-sm space-y-1 text-green-700 ${
-                        settings.darkMode ? 'dark:text-green-300' : ''
-                      } ${settings.highContrast ? 'text-white' : ''}`}>
-                        <li>• 15+ années d'enseignement</li>
-                        <li>• 5000+ étudiants formés</li>
-                        <li>• Auteur de 3 manuels pédagogiques</li>
-                      </ul>
-                    </div>
-                  </div>
+
                 </div>
                 
                 <div className="mt-6">
