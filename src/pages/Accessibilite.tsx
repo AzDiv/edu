@@ -15,67 +15,67 @@ const Accessibilite: React.FC = () => {
   // Video data from the playlist
   const videos = [
     {
-      id: "J433f9aP9M4",
+      id: "t1Hp8I8tZhg",
       title: "Il était une Fois un Vieux Couple Heureux",
       episode: "Episode 1",
       description: "Introduction à l'œuvre de Mohammed KHAÏR-EDDINE",
-      thumbnail: `https://img.youtube.com/vi/J433f9aP9M4/maxresdefault.jpg`
-    },
-    {
-      id: "t1Hp8I8tZhg", 
-      title: "Il était une Fois un Vieux Couple Heureux",
-      episode: "Episode 2",
-      description: "Continuation de la lecture par Aicha Maazouz",
       thumbnail: `https://img.youtube.com/vi/t1Hp8I8tZhg/maxresdefault.jpg`
     },
     {
-      id: "XYZ123ABC", // Replace with actual video ID
+      id: "AuljdnbV9Q0", 
+      title: "Il était une Fois un Vieux Couple Heureux",
+      episode: "Episode 2",
+      description: "Continuation de la lecture par Aicha Maazouz",
+      thumbnail: `https://img.youtube.com/vi/AuljdnbV9Q0/maxresdefault.jpg`
+    },
+    {
+      id: "01_Plo2mG5k",
       title: "Il était une Fois un Vieux Couple Heureux",
       episode: "Episode 3", 
       description: "Suite de l'histoire",
-      thumbnail: `https://img.youtube.com/vi/XYZ123ABC/maxresdefault.jpg`
+      thumbnail: `https://img.youtube.com/vi/01_Plo2mG5k/maxresdefault.jpg`
     },
     {
-      id: "DEF456GHI",
+      id: "U-ukytPojhs",
       title: "Il était une Fois un Vieux Couple Heureux",
       episode: "Episode 4",
       description: "Développement des personnages",
-      thumbnail: `https://img.youtube.com/vi/DEF456GHI/maxresdefault.jpg`
+      thumbnail: `https://img.youtube.com/vi/U-ukytPojhs/maxresdefault.jpg`
     },
     {
-      id: "JKL789MNO",
+      id: "TQVw1EfffTs",
       title: "Il était une Fois un Vieux Couple Heureux", 
       episode: "Episode 5",
       description: "Climax de l'histoire",
-      thumbnail: `https://img.youtube.com/vi/JKL789MNO/maxresdefault.jpg`
+      thumbnail: `https://img.youtube.com/vi/TQVw1EfffTs/maxresdefault.jpg`
     },
     {
-      id: "PQR012STU",
+      id: "3S1CUWKKsbU",
       title: "Il était une Fois un Vieux Couple Heureux",
       episode: "Episode 6", 
       description: "Résolution du conflit",
-      thumbnail: `https://img.youtube.com/vi/PQR012STU/maxresdefault.jpg`
+      thumbnail: `https://img.youtube.com/vi/3S1CUWKKsbU/maxresdefault.jpg`
     },
     {
-      id: "VWX345YZ",
+      id: "KMBjt4dEQK0",
       title: "Il était une Fois un Vieux Couple Heureux",
       episode: "Episode 7",
       description: "Dénouement",
-      thumbnail: `https://img.youtube.com/vi/VWX345YZ/maxresdefault.jpg`
+      thumbnail: `https://img.youtube.com/vi/KMBjt4dEQK0/maxresdefault.jpg`
     },
     {
-      id: "ABC678DEF",
+      id: "OpX6ZnPY4GA",
       title: "Il était une Fois un Vieux Couple Heureux",
       episode: "Episode 8",
       description: "Épilogue partie 1",
-      thumbnail: `https://img.youtube.com/vi/ABC678DEF/maxresdefault.jpg`
+      thumbnail: `https://img.youtube.com/vi/OpX6ZnPY4GA/maxresdefault.jpg`
     },
     {
-      id: "GHI901JKL", 
+      id: "J433f9aP9M4", 
       title: "Il était une Fois un Vieux Couple Heureux",
       episode: "Episode 9",
       description: "Épilogue partie 2 - Conclusion",
-      thumbnail: `https://img.youtube.com/vi/GHI901JKL/maxresdefault.jpg`
+      thumbnail: `https://img.youtube.com/vi/J433f9aP9M4/maxresdefault.jpg`
     }
   ];
 
@@ -1064,29 +1064,29 @@ const Accessibilite: React.FC = () => {
           </div>
         </div>
 
-        {/* Enhanced Video Modal with Sidebar */}
+        {/* Enhanced Video Modal with Responsive Design */}
         {selectedVideo && (
-          <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4">
-            <div className="bg-white rounded-xl max-w-7xl w-full max-h-[95vh] overflow-hidden flex">
+          <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-2 sm:p-4">
+            <div className="bg-white rounded-lg sm:rounded-xl max-w-7xl w-full max-h-[95vh] overflow-hidden flex flex-col lg:flex-row">
               
               {/* Main Video Section */}
-              <div className="flex-1 p-6">
+              <div className="flex-1 p-3 sm:p-6">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className={`font-bold text-gray-900 ${
-                    settings.fontSize === 'large' ? 'text-2xl' : settings.fontSize === 'small' ? 'text-lg' : 'text-xl'
-                  }`}>
+                    settings.fontSize === 'large' ? 'text-xl sm:text-2xl' : settings.fontSize === 'small' ? 'text-base sm:text-lg' : 'text-lg sm:text-xl'
+                  } line-clamp-2 pr-2`}>
                     {videos.find(v => v.id === selectedVideo)?.title}
                   </h3>
                   <button
                     onClick={() => setSelectedVideo(null)}
-                    className="text-gray-500 hover:text-gray-700 text-3xl font-bold p-2 hover:bg-gray-100 rounded-full transition-colors"
+                    className="text-gray-500 hover:text-gray-700 text-2xl sm:text-3xl font-bold p-1 sm:p-2 hover:bg-gray-100 rounded-full transition-colors flex-shrink-0"
                   >
                     ×
                   </button>
                 </div>
                 
                 {/* Video Player */}
-                <div className="aspect-video rounded-lg overflow-hidden mb-4">
+                <div className="aspect-video rounded-md sm:rounded-lg overflow-hidden mb-4">
                   <iframe
                     width="100%"
                     height="100%"
@@ -1095,87 +1095,92 @@ const Accessibilite: React.FC = () => {
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
-                    className="rounded-lg"
+                    className="rounded-md sm:rounded-lg"
                   ></iframe>
                 </div>
                 
                 {/* Video Description */}
                 <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="bg-purple-100 text-purple-800 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
                       {videos.find(v => v.id === selectedVideo)?.episode}
                     </span>
-                    <span className="text-gray-500 text-sm">
+                    <span className="text-gray-500 text-xs sm:text-sm">
                       Mohammed KHAÏR-EDDINE lu par Aicha Maazouz
                     </span>
                   </div>
                   <p className={`text-gray-600 ${
-                    settings.fontSize === 'large' ? 'text-lg' : settings.fontSize === 'small' ? 'text-sm' : 'text-base'
+                    settings.fontSize === 'large' ? 'text-base sm:text-lg' : settings.fontSize === 'small' ? 'text-xs sm:text-sm' : 'text-sm sm:text-base'
                   }`}>
                     {videos.find(v => v.id === selectedVideo)?.description}
                   </p>
                 </div>
               </div>
               
-              {/* Sidebar with Video List */}
-              <div className="w-80 bg-gray-50 border-l border-gray-200 overflow-y-auto">
-                <div className="p-4 border-b border-gray-200 bg-gray-100">
+              {/* Video List - Responsive Layout */}
+              <div className="w-full lg:w-80 bg-gray-50 border-t lg:border-t-0 lg:border-l border-gray-200 max-h-80 lg:max-h-full overflow-y-auto">
+                <div className="p-3 sm:p-4 border-b border-gray-200 bg-gray-100">
                   <h4 className={`font-semibold text-gray-900 ${
-                    settings.fontSize === 'large' ? 'text-lg' : settings.fontSize === 'small' ? 'text-base' : 'text-base'
+                    settings.fontSize === 'large' ? 'text-base sm:text-lg' : settings.fontSize === 'small' ? 'text-sm sm:text-base' : 'text-sm sm:text-base'
                   }`}>
                     Série complète ({videos.length} épisodes)
                   </h4>
                 </div>
                 
-                <div className="p-2">
-                  {videos.map((video) => (
-                    <button
-                      key={video.id}
-                      onClick={() => setSelectedVideo(video.id)}
-                      className={`w-full p-3 rounded-lg mb-2 text-left hover:bg-gray-100 transition-colors ${
-                        selectedVideo === video.id ? 'bg-purple-50 border-l-4 border-purple-500' : ''
-                      }`}
-                    >
-                      <div className="flex items-start space-x-3">
-                        {/* Video Thumbnail */}
-                        <div className="flex-shrink-0 w-20 h-12 bg-gray-200 rounded overflow-hidden">
-                          <img
-                            src={video.thumbnail}
-                            alt={video.title}
-                            className="w-full h-full object-cover"
-                            onError={(e) => {
-                              const target = e.target as HTMLImageElement;
-                              target.src = 'https://img.youtube.com/vi/J433f9aP9M4/maxresdefault.jpg';
-                            }}
-                          />
-                        </div>
-                        
-                        {/* Video Info */}
-                        <div className="flex-1 min-w-0">
-                          <h5 className={`font-medium text-gray-900 line-clamp-2 ${
-                            settings.fontSize === 'large' ? 'text-base' : settings.fontSize === 'small' ? 'text-sm' : 'text-sm'
-                          } ${selectedVideo === video.id ? 'text-purple-600' : ''}`}>
-                            {video.title}
-                          </h5>
-                          <p className="text-xs text-gray-500 mt-1">
-                            {video.episode}
-                          </p>
-                          <p className={`text-xs text-gray-600 mt-1 line-clamp-2 ${
-                            settings.fontSize === 'large' ? 'text-sm' : 'text-xs'
-                          }`}>
-                            {video.description}
-                          </p>
-                        </div>
-                        
-                        {/* Play Icon for Current Video */}
-                        {selectedVideo === video.id && (
-                          <div className="flex-shrink-0 text-purple-500">
-                            <Play className="h-4 w-4" fill="currentColor" />
+                {/* Mobile: Horizontal scroll, Desktop: Vertical scroll */}
+                <div className="lg:p-2">
+                  <div className="flex lg:flex-col gap-2 p-2 lg:p-0 overflow-x-auto lg:overflow-x-visible scrollbar-hide">
+                    <div className="flex lg:flex-col gap-2 lg:gap-0">
+                      {videos.map((video) => (
+                        <button
+                          key={video.id}
+                          onClick={() => setSelectedVideo(video.id)}
+                          className={`flex-shrink-0 lg:flex-shrink w-64 lg:w-full p-2 sm:p-3 rounded-lg text-left hover:bg-gray-100 transition-colors lg:mb-2 ${
+                            selectedVideo === video.id ? 'bg-purple-50 border-l-4 border-purple-500' : ''
+                          }`}
+                        >
+                          <div className="flex items-start space-x-2 sm:space-x-3">
+                            {/* Video Thumbnail */}
+                            <div className="flex-shrink-0 w-16 h-10 sm:w-20 sm:h-12 bg-gray-200 rounded overflow-hidden">
+                              <img
+                                src={video.thumbnail}
+                                alt={video.title}
+                                className="w-full h-full object-cover"
+                                onError={(e) => {
+                                  const target = e.target as HTMLImageElement;
+                                  target.src = 'https://img.youtube.com/vi/J433f9aP9M4/maxresdefault.jpg';
+                                }}
+                              />
+                            </div>
+                            
+                            {/* Video Info */}
+                            <div className="flex-1 min-w-0">
+                              <h5 className={`font-medium text-gray-900 line-clamp-2 ${
+                                settings.fontSize === 'large' ? 'text-sm sm:text-base' : settings.fontSize === 'small' ? 'text-xs sm:text-sm' : 'text-xs sm:text-sm'
+                              } ${selectedVideo === video.id ? 'text-purple-600' : ''}`}>
+                                {video.title}
+                              </h5>
+                              <p className="text-xs text-gray-500 mt-1">
+                                {video.episode}
+                              </p>
+                              <p className={`text-xs text-gray-600 mt-1 line-clamp-2 lg:line-clamp-1 ${
+                                settings.fontSize === 'large' ? 'sm:text-sm' : 'text-xs'
+                              }`}>
+                                {video.description}
+                              </p>
+                            </div>
+                            
+                            {/* Play Icon for Current Video */}
+                            {selectedVideo === video.id && (
+                              <div className="flex-shrink-0 text-purple-500">
+                                <Play className="h-3 w-3 sm:h-4 sm:w-4" fill="currentColor" />
+                              </div>
+                            )}
                           </div>
-                        )}
-                      </div>
-                    </button>
-                  ))}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
