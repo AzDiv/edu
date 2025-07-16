@@ -255,7 +255,7 @@ const Accueil: React.FC = () => {
             <h2 className={`font-bold text-gray-900 mb-6 ${
               settings.fontSize === 'large' ? 'text-4xl' : settings.fontSize === 'small' ? 'text-2xl' : 'text-3xl'
             } ${settings.darkMode ? 'dark:text-white' : ''} ${settings.highContrast ? 'text-white' : ''}`}>
-              Partenariat avec le Ministère de la Culture & Université Ibn Zohr
+              Le Ministère de la Culture & Université Ibn Zohr
             </h2>
             
             {/* Partner Logos */}

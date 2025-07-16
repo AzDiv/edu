@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
                 <span className={`text-gray-300 ${
                   settings.fontSize === 'large' ? 'text-base' : settings.fontSize === 'small' ? 'text-sm' : 'text-sm'
                 } ${settings.highContrast ? 'text-white' : ''}`}>
-                  contact@edufrancais.ma
+                  aiichamaazouz@gmail.com
                 </span>
               </div>
               <div className="flex items-center space-x-3">
@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
                 <span className={`text-gray-300 ${
                   settings.fontSize === 'large' ? 'text-base' : settings.fontSize === 'small' ? 'text-sm' : 'text-sm'
                 } ${settings.highContrast ? 'text-white' : ''}`}>
-                  +212 5XX-XXXXXX
+                  +212 66 960 87 14
                 </span>
               </div>
               <div className="flex items-center space-x-3">
@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
                 <span className={`text-gray-300 ${
                   settings.fontSize === 'large' ? 'text-base' : settings.fontSize === 'small' ? 'text-sm' : 'text-sm'
                 } ${settings.highContrast ? 'text-white' : ''}`}>
-                  Casablanca, Maroc
+                  Taroudant, Maroc
                 </span>
               </div>
             </div>
@@ -106,7 +106,7 @@ const Footer: React.FC = () => {
           <p className={`text-gray-400 ${
             settings.fontSize === 'large' ? 'text-base' : settings.fontSize === 'small' ? 'text-xs' : 'text-sm'
           } ${settings.highContrast ? 'text-white' : ''}`}>
-            © 2024 EduFrançais. Tous droits réservés. Développé pour l'éducation au Maroc.
+            © 2024 EduFrançais. Tous droits réservés. Développé pour l'éducation au Maroc par Azeddine Bourchouk.
           </p>
         </div>
       </div>
