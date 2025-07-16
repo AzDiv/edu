@@ -100,7 +100,7 @@ const Cours: React.FC = () => {
                   <span className={`text-gray-600 ${
                     settings.darkMode ? 'dark:text-gray-300' : ''
                   } ${settings.highContrast ? 'text-white' : ''}`}>
-                    {currentCourse.students} étudiants
+                    {currentCourse.students} apprenants
                   </span>
                 </div>
 
@@ -460,7 +460,7 @@ const Cours: React.FC = () => {
                   <span className={`text-sm text-gray-500 ${
                     settings.darkMode ? 'dark:text-gray-400' : ''
                   } ${settings.highContrast ? 'text-gray-300' : ''}`}>
-                    {course.students} étudiants
+                    {course.students} apprenants
                   </span>
                   <button className={`bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-2 ${
                     settings.fontSize === 'large' ? 'text-base' : settings.fontSize === 'small' ? 'text-sm' : 'text-sm'

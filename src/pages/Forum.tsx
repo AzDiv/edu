@@ -134,7 +134,7 @@ const Forum: React.FC = () => {
               <h1 className={`font-bold text-gray-900 mb-4 ${
                 settings.fontSize === 'large' ? 'text-4xl' : settings.fontSize === 'small' ? 'text-2xl' : 'text-3xl'
               } ${settings.darkMode ? 'dark:text-white' : ''} ${settings.highContrast ? 'text-white' : ''}`}>
-                Forum Étudiant
+                Forum Apprenant
               </h1>
               <p className={`text-gray-600 max-w-2xl ${
                 settings.darkMode ? 'dark:text-gray-300' : ''

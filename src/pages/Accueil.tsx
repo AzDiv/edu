@@ -91,7 +91,7 @@ const Accueil: React.FC = () => {
     },
     {
       icon: MessageSquare,
-      title: "Forum Étudiant",
+      title: "Forum Apprenant",
       description: "Échangez avec d'autres lycéens et posez vos questions",
       link: "/forum",
       color: "purple"
@@ -108,7 +108,7 @@ const Accueil: React.FC = () => {
   const stats = [
     { number: "500+", label: "Exercices disponibles" },
     { number: "50+", label: "Cours détaillés" },
-    { number: "1000+", label: "Étudiants actifs" },
+    { number: "1000+", label: "apprenants actifs" },
     { number: "95%", label: "Taux de réussite" }
   ];
 
@@ -690,7 +690,7 @@ const Accueil: React.FC = () => {
           <p className={`mb-8 text-blue-100 leading-relaxed ${
             settings.fontSize === 'large' ? 'text-xl' : settings.fontSize === 'small' ? 'text-base' : 'text-lg'
           } ${settings.highContrast ? 'text-gray-600' : ''}`}>
-            Rejoignez des milliers d'étudiants qui ont déjà amélioré leurs résultats grâce à notre plateforme.
+            Rejoignez des milliers d'apprenants qui ont déjà amélioré leurs résultats grâce à notre plateforme.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
