@@ -45,7 +45,7 @@ const Header: React.FC = () => {
             } ${settings.highContrast ? 'text-white' : ''} ${
               settings.fontSize === 'large' ? 'text-2xl' : settings.fontSize === 'small' ? 'text-lg' : 'text-xl'
             }`}>
-              EduFrançais
+              Aicha-Edu
             </span>
           </Link>
 
